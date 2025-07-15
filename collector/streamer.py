@@ -7,7 +7,8 @@ ACCESS_TOKEN = "1945185419718746113-J93VZ41JRhysprnwXfzKDAI0zratE5"
 ACCESS_SECRET = "AyWYkdzZnDEM6e21onFC3xMKhgB5dw0FTxWjIR3G8HSQ1"
 
 # Authenticate
-auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
+auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 # Test connection
