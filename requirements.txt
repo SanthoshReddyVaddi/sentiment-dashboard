@@ -1,0 +1,7 @@
+tweepy
+psycopg2-binary      # PostgreSQL driver
+sqlalchemy
+nltk
+transformers
+torch
+pandas
