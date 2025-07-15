@@ -9,7 +9,11 @@ ACCESS_SECRET = "AyWYkdzZnDEM6e21onFC3xMKhgB5dw0FTxWjIR3G8HSQ1"
 # Authenticate
 auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
+client = tweepy.Client(bearer_token='AAAAAAAAAAAAAAAAAAAAAB1Q3AEAAAAAAzkDKW3azp0JhtfajSqJWWacdC4%3DDZ8tJxYbZiV0zmBTXld6PAxUYqw19ODVFpCduQOnW8zmQgV5AL')
 
+tweets = client.search_recent_tweets("Python", max_results=5)
+for tweet in tweets.data:
+    print(tweet.text)
 # Test connection
 print(api.verify_credentials())
 print("API connection successful!")
