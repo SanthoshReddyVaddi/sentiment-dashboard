@@ -1,7 +1,7 @@
 
 import tweepy
 
-client = tweepy.Client(bearer_token='YOUR_BEARER_TOKEN')
+client = tweepy.Client(bearer_token='AAAAAAAAAAAAAAAAAAAAAB1Q3AEAAAAAwK2iMTsmnaZH0rNGL7ZHEOMRpxw%3DZH27D8WYiPxHYLKTRByLJdB4JyE6LYmwbKunBfU1p6eUIqHzaE')
 
 query = 'Python lang:en -is:retweet'
 
