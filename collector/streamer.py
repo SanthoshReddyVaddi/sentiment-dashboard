@@ -1,4 +1,15 @@
+
 import tweepy
+
+client = tweepy.Client(bearer_token='YOUR_BEARER_TOKEN')
+
+query = 'Python lang:en -is:retweet'
+
+response = client.search_recent_tweets(query=query, max_results=5, tweet_fields=['text'])
+
+for tweet in response.data:
+    print(tweet.text)
+'''import tweepy
 
 # Replace these with your Twitter Developer credentials
 API_KEY = "xoZB6oZ4wCenb5UQNrbWO2GCi"
@@ -17,4 +28,4 @@ print("API connection successful!")
 
 # Simple search example
 for tweet in tweepy.Cursor(api.search_tweets, q="Python", lang="en", tweet_mode="extended").items(5):
-    print(tweet.created_at, "-", tweet.user.screen_name, ":", tweet.full_text)
+    print(tweet.created_at, "-", tweet.user.screen_name, ":", tweet.full_text)'''
